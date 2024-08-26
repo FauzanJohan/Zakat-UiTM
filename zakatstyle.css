@@ -1,0 +1,162 @@
+.text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: solid black;
+}
+
+.text a{
+    color: darkblue;
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.header-conent{
+    text-align: center;
+}
+
+.logo {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+    flex: 0 0 auto; 
+}
+
+.p{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box{
+    border-color:darkblue;
+    size: 1px;
+}
+
+.box2{
+    border-color:solid black;
+    size: 2px;
+    padding: 12px;
+}
+
+.box3{
+    border-color:solid black;
+    size: 1px;
+}
+
+
+.span a{
+    display: inline-block;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.container {
+    width: 60%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.outputText{
+    font-size: 14px; 
+    padding: 1px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.containerTitle {
+    background-color: #6A5ACD;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+select {
+    border: 1px solid black;
+    background-color: white;
+    font-size: 14px;
+    padding: 1px;
+    width: 100%;
+    height: 25px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Make the buttons take full width */
+    margin-top: 20px; /* Add margin after the form */
+}
+
+input[type="text"] {
+    border: 1px solid black; 
+    background-color:white; 
+    font-size: 14px; 
+    padding: 1px; 
+    width: 100%; 
+    height: 25px;
+}
+
+input[type="submit"] {
+    width: 200px; 
+    padding: 15px; 
+    background-color: green; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+    border-color: #999; 
+}
+
+input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.reset-button {
+    float: right;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust spacing */
+}
+
+.reset-button:hover {
+    background-color: darkred;
+}
+
+.error {
+    color: red;
+}
+
+.print-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}

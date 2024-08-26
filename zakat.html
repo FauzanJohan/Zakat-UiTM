@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="zakatstyle.css">
+        <script src="script.js"></script>
+        <title>Zakat Form</title>
+    </head>
+
+    <body>
+
+            <div class="header">
+                <img src="uitmlogo.png" alt="image" class="logo">
+                <div class="header-content">
+                    <p class="text">UNIT PENGURUSAN ZAKAT</p>
+                    <p class="text">AKADEMI PENGAJIAN ISLAM KONTEMPORARI (ACIS)</p>
+                    <p class="text">UNIVERSITI TEKNOLOGI MARA (PAHANG)</p>
+                    <p class="text">26400 BANDAR TUN ABD RAZAK JENGKA, PAHANG</p>
+                    <p class="text">TEL: 09-4602128/2418/2443/2288</p>
+                    <p class="text">FAX: 09-4602392</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <form method="post" action="zakatprocess.php" id="zakatForm" onsubmit="return validateForm(event)">
+
+                    <div class="containerTitle">BORANG PERMOHONAN BANTUAN ZAKAT</div>
+
+                    <fieldset>
+                        Pemohon Kali Ke:<br>
+                        <select name="pemohon">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>                                
+                            <option value="4">4</option>
+                        </select>
+                        <br>
+
+                        <br>Fasa:<br>
+                        <select name="fasa">
+                            <option value="February">February</option>
+                            <option value="October">October</option>
+                        </select>
+                        <br>
+
+                        <br>Program:<br>                            
+                        <select name="program">
+                            <option value="Diploma">Diploma</option>
+                            <option value="Degree">Degree</option>
+                        </select>
+                        <br>
+                    </fieldset>
+                    <br>
+
+                    <div class="containerTitle">BUTIRAN PERIBADI</div>
+
+                    <fieldset>
+                        Nama:<br>
+                        <input type="text" id="namaPelajar" name="namaPelajar" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                        <br>
+
+                        <br>No. K/P:<br>
+                        <input type="text" id="nokpPelajar" name="nokpPelajar" required pattern="[0-9]{12}" title="Hanya nombor (12 angka)">
+                        <br>
+                            
+                        <br>No Pelajar:<br>
+                        <input type="text" id="noPelajar" name="noPelajar" required pattern="[0-9]{10}" title="Hanya nombor (10 angka)">
+                        <br>
+                            
+                        <br>Fakulti:<br>
+                        <select name="fakulti">
+                            <option value="KPPIM">KPPIM</option>
+                            <option value="Farmasi">Farmasi</option>
+                            <option value="Pergigian">Pergigian</option>
+                            <option value="Pertanian">Pertanian</option>
+                        </select>
+                        <br>
+
+                        <br>Kod Kursus:<br>
+                        <select name="kodkursus">
+                            <option value="CS240">CS240</option>
+                            <option value="APA123">APA123</option>
+                        </select>
+                        <br>
+
+                        <br>No Tel. Bimbit:<br>
+                            <input type="text" id="notelefon" name="notelefon" required pattern="[0-9]{11}" title="Hanya nombor (11 angka)">
+                        <br>
+                            
+                        <br>Taraf Perkahwinan: <br>
+                        <select name="tarafperkahwinan">
+                            <option value="Bujang">Bujang</option>
+                            <option value="Kahwin">Kahwin</option>
+                            <option value="Duda">Duda</option>
+                            <option value="Janda">Janda</option>
+                        </select>
+                        <br>
+
+                        <br>Jantina: <br>
+                        <select name="jantina">
+                            <option value="Lelaki">Lelaki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <br>
+                    
+                        <br>Semester:<br>
+                        <select name="semester">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <br>
+                    
+                        <br>Sesi:<br>
+                        <select name="sesi">
+                            <option value="2023/2024">2023/2024</option>
+                            <option value="2024/2025">2024/2025</option>
+                        </select>
+                        <br>
+                            
+                        <br>Keptutusan CGPA:<br>
+                        <input type="text" id="cgpa" name="cgpa" required pattern="[0-9]{3}" title="Hanya nombor (3 angka)">
+                        <br>
+                    
+                        <br>Keputusan GPA:<br>
+                        <input type="text" id="gpa" name="gpa" required pattern="[0-9]{3}" title="Hanya nombor (3 angka)">
+                        <br>
+                    
+                        <br>Negeri Asal:<br>
+                        <select name="negeri">
+                            <option value="Johor">Johor</option>
+                            <option value="Kedah">Kedah</option>
+                            <option value="Kelantan">Kelantan</option>
+                            <option value="Melaka">Melaka</option>
+                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                            <option value="Pahang">Pahang</option>
+                            <option value="Perak">Perak</option>
+                            <option value="Perlis">Perlis</option>
+                            <option value="Pulau Pinang">Pulau Pinang</option>
+                            <option value="Selangor">Selangor</option>
+                            <option value="Terengganu">Terengganu</option>
+                            <option value="Sabah">Sabah</option>
+                            <option value="Sarawak">Sarawak</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        </select>
+                        <br>
+                    
+                        <br>Nama Bank:<br>
+                        <select name="bank">
+                            <option value="Cimb">Cimb</option>
+                            <option value="RHB Bank">RHB Bank</option>
+                            <option value="Bank Islam">Bank Islam</option>
+                        </select>
+                        <br>
+                    
+                        <br>No Akaun Bank:<br>
+                        <input type="text" id="noBank" name="noBank" required pattern="[0-9]{14}" title="Hanya nombor (14 angka)">
+                        <br>
+                    
+                        <br>Alamat Semasa Surat Menyurat:<br>
+                        <input type="text" id="alamatPelajar" name="alamatPelajar" required> 
+                        <br>
+
+                    </fieldset>
+                    <br>
+
+                    <div class ="containerTitle">BUTIR-BUTIR KETUA KELUARGA (IBU BAPA/PENJAGA)</div>
+
+                    <fieldset>
+                        <br>Nama Bapa/Penjaga:<br>
+                        <input type="text" id="namaBapa" name="namaBapa" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                        <br>
+                    
+                        <br>Pekerjaan:<br>
+                        <input type="text" id="pekerjaanBapa" name="pekerjaanBapa" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                        <br>
+                    
+                        <br>Hubungan:<br>
+                        <select name="hubunganBapa">
+                            <option value="Bapa Sendiri">Bapa Sendiri</option>
+                            <option value="Meninggal">Meninggal</option>
+                            <option value="Bapa Tiri">Bapa Tiri</option>
+                        </select>
+                        <br>
+                    
+                        <br>Status Perkahwinan:<br>
+                        <select name="statuskahwinbapa">
+                            <option value="Kahwin">Berkahwin</option>
+                            <option value="Cerai">Cerai</option>
+                            <option value="Tunggal">Tunggal</option>
+                        </select>
+                        <br>
+                    
+                        <br>Alamat Surat Menyurat:<br>
+                        <input type="text" id="alamatBapa" name="alamatBapa" required>
+                        <br>
+
+                        <br>Nama Ibu:<br>
+                        <input type="text" id="namaIbu" name="namaIbu" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                        <br>
+                    
+                        <br>Pekerjaan:<br>
+                        <input type="text" id="pekerjaanIbu" name="pekerjaanIbu" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                        <br>
+                    
+                        <br>Hubungan:<br>
+                        <select name="hubunganIbu">
+                            <option value="Ibu Sendiri">Ibu Sendiri</option>
+                            <option value="Meninggal">Meninggal</option>
+                            <option value="Ibu Tiri">Ibu Tiri</option>
+                        </select>
+                        <br>
+                    
+                        <br>Status Perkahwinan:<br>
+                        <select name="statuskahwinibu">
+                            <option value="Kahwin">Berkahwin</option>
+                            <option value="Cerai">Cerai</option>
+                            <option value="Tunggal">Tunggal</option>
+                        </select>
+                        <br>
+                    
+                    
+                        <br>Alamat Surat Menyurat:<br>
+                        <input type="text" id="alamatIbu" name="alamatIbu" required>
+                        <br>
+                            
+                        <br>Pendapatan Bulanan Bapa/Penjaga (RM):<br>
+                        <input type="text" id="pendapatanBapa" name="pendapatBapa" required pattern="[0-9]+" title="Hanya nombor">
+                        <br>
+                    
+                        <br>Pendapatan Bulanan Ibu (RM):<br>
+                        <input type="text" id="pendapatIbu" name="pendapatIbu" required pattern="[0-9]+" title="Hanya nombor">
+                        <br>
+
+                    </fieldset>
+                    <br>
+     
+                    <div class ="containerTitle">BUTIR-BUTIR BANTUAN</div>     
+
+                    <fieldset>        
+                        <br>Adakah anda mendapat bantuan kewangan:<br>
+                            <select id="bantuan" name="bantuan" onchange="showAdditionalInput1()">
+                                <option value="Ada">Ada</option>
+                                <option value="Tiada">Tiada</option>
+                            </select>
+                            <br>
+                    
+                        <div id="additionalInput1" style="display: none;">
+                            <br>Jenis bantuan kewangan<br>
+                            <select name="jenisBantuan">
+                                <option value="JPA">JPA</option>
+                                <option value="PTPTN">PTPTN</option>
+                                <option value="MARA">MARA</option>
+                                <option value="Lain-lain">Lain-lain</option>
+                            </select>
+                            <br>
+                            
+                            <br>Jumlah per/sem (RM):<br>
+                            <input type="text" id="jumlahBantuan" name="jumlahBantuan" reqiuired pattern="[0-9]+" title="Hanya nombor">
+                            <br>
+                        </div>
+
+                        <br>Pernah menerima zakat Uitm:<br>
+                            <select id="zakat" name="zakat" onchange="showAdditionalInput2()">
+                                <option value="Ada">Ada</option>
+                                <option value="Tiada">Tiada</option>
+                            </select>
+                            <br>
+
+                        <div id="additionalInput2" style="display: none;">
+                            <br>Tahun:<br>
+                            <input type="date" id="tahunZakat" name="tahunZakat" required pattern="[0-9]{4}" title="Hanya nombor (4 angka)">
+                            <br>
+                                
+                            <br>Jumlah:<br>
+                            <input type="text" id="jumlahZakat" name="jumlahZakat" required pattern="[0-9]+" title="Hanya nombor">
+                            <br>
+                                
+                            <br>Tujuan memohon bantuan Zakat UiTM<br>
+                            <input type="text" id="tujuanZakat" name="tujuanZakat" required pattern="[A-Za-z ]+" title="Hanya huruf dan ruang">
+                            <br>
+                        </div>
+                    </fieldset> 
+
+                    <div class="button-container">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset Form" onclick="confirmReset()" class="reset-button">
+                </div>
+            </form>
+        </div>
+        </div>
+
+        
+
+    </body>
+</html>
+
